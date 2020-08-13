@@ -28,7 +28,7 @@ public class Retro implements IRetro{
         this.BASE_URL = BASE_URL;
     }
 
-    private void compatibilityAndroid4(OkHttpClient.Builder httpClient) {
+    private void compatibilityAndroid4_1_To_4_4(OkHttpClient.Builder httpClient) {
         /* Compatibility with versions 4.1 to 4.4 due to error [SSLProtocolException: SSL handshake aborted]  */
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN && Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
@@ -51,7 +51,7 @@ public class Retro implements IRetro{
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder().connectTimeout(CONNECT_TIMEOUT_SECONDS, TimeUnit.SECONDS).readTimeout(READ_TIMEOUT_SECONDS, TimeUnit.SECONDS);
-        compatibilityAndroid4(httpClient);
+        compatibilityAndroid4_1_To_4_4(httpClient);
         if (ENABLE_LOG) {
             httpClient.addInterceptor(logging);
         }

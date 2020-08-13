@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CommunUtilidades</string>
+
+
+    <string name="codeapi_error_unknown">Algo salió mal.(codigo: %s)</string>
+    <string name="codeapi_session_invalid">Sesión inválida</string>
+
 </resources>

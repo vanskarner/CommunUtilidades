@@ -12,9 +12,17 @@ android {
         multiDexEnabled true
     }
     buildTypes {
+        Properties serverProps = new Properties()
+        serverProps.load(new FileInputStream(file('../servicesweb.properties')))
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "AUTHORIZATION", serverProps["Authorization"]
+            buildConfigField "String", "URL_BASE", serverProps["Base_url"]
+        }
+        debug {
+            buildConfigField "String", "AUTHORIZATION", serverProps["Authorization"]
+            buildConfigField "String", "URL_BASE", serverProps["Base_url"]
         }
     }
 
