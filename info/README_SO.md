@@ -1,6 +1,6 @@
 # SO | COMMONUTILITIES
 
-Conjunto de utilidades ligados al uso de componentes android. Forma parte del proyecto [CommonUtilities](https://github.com/vanskarner/CommonUtilities/blob/master/README.md)
+Conjunto de utilidades ligados al uso de componentes android. Forma parte del proyecto [CommonUtilities](https://github.com/vanskarner/CommunUtilidades/blob/master/README.md)
 
 ## Contenido :package:
 
