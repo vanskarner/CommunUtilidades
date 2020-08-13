@@ -1,6 +1,6 @@
 # notification | SO - COMMONUTILITIES
 
-Utilidad relacionada al manejo de notificaciones push. Forma parte del proyecto [CommonUtilities](https://github.com/vanskarner/CommonUtilities/blob/master/README.md)
+Utilidad relacionada al manejo de notificaciones push. Forma parte del proyecto [CommonUtilities](https://github.com/vanskarner/CommunUtilidades/blob/master/README.md)
 
 ## Pre-Requisitos :gear:
 
