@@ -1,6 +1,6 @@
 # network | SO - COMMONUTILITIES
 
-Utilidad relacionada a la conexión de redes e Internet. Forma parte del proyecto [CommonUtilities](https://github.com/vanskarner/CommonUtilities/blob/master/README.md)
+Utilidad relacionada a la conexión de redes e Internet. Forma parte del proyecto [CommonUtilities](https://github.com/vanskarner/CommunUtilidades/blob/master/README.md)
 
 ## Pre-Requisitos :gear:
 
