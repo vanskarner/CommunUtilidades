@@ -42,7 +42,7 @@ Cada clase que se cree en la carpeta `callback`, debe extender de la clase **Con
 
 ![alt text](https://github.com/vanskarner/CommunUtilidades/blob/master/info/user_example_retrofit.png)
 
-La carpeta `codes` esta orientada a filtrar los mensajes personalizados por el tipo de código http, esta se encuentra siendo usada en **ConfigCallback** para filtrar el mensaje correspondiente en cada solicitud que se realice. Aquí solo se modificará el método **getMessagesOfCodesHttp** dentro de la clase Codes.
+La carpeta `codes` esta orientada a filtrar los mensajes personalizados por el tipo de código http, esta se encuentra siendo usada en **ConfigCallback** para filtrar el mensaje correspondiente en cada solicitud que se realice. Aquí solo se modificará el método **getMessagesOfCodesHttp** dentro de la clase **Codes**.
 
 ![alt text](https://github.com/vanskarner/CommunUtilidades/blob/master/info/codes_retrofit.png)
 
@@ -67,7 +67,7 @@ No hay por el momento.
 ## Expresiones de Gratitud 🎁
 
 * Gracias al sitio https://jsonplaceholder.typicode.com por su REST API para realizar las pruebas.
-* Gracias a flaticon: https://www.flaticon.com , donde extraimos los iconos usados en la aplicación: 
+* Gracias a flaticon: https://www.flaticon.com , donde extraímos los iconos usados en la aplicación: 
 
 ## Última revisión :watch:
 Lunes, 20 de agosto del 2020
