@@ -17,13 +17,16 @@ import vanskarner.android.communutilidades.iu.lib.retro.company1.model.User;
 
 public class RetrofitActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ServicesCallback servicesCallback=new ServicesCallback();
+    private ServicesCallback servicesCallback = new ServicesCallback();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initializeIU();
+    }
 
+    public void initializeIU() {
         Button btnGet = findViewById(R.id.btnGet);
         Button btnPost = findViewById(R.id.btnPost);
         Button btnPut = findViewById(R.id.btnPut);
@@ -33,7 +36,6 @@ public class RetrofitActivity extends AppCompatActivity implements View.OnClickL
         btnPost.setOnClickListener(this);
         btnPut.setOnClickListener(this);
         btnDelete.setOnClickListener(this);
-
     }
 
     public void setInfo(User userRes) {
@@ -70,12 +72,13 @@ public class RetrofitActivity extends AppCompatActivity implements View.OnClickL
         tvTitle.setText(title);
     }
 
-    public void showProgressBar(){
-        ProgressBar progressBar=findViewById(R.id.progressBar);
+    public void showProgressBar() {
+        ProgressBar progressBar = findViewById(R.id.progressBar);
         progressBar.setIndeterminate(true);
     }
-    public void hideProgressBar(){
-        ProgressBar progressBar=findViewById(R.id.progressBar);
+
+    public void hideProgressBar() {
+        ProgressBar progressBar = findViewById(R.id.progressBar);
         progressBar.setIndeterminate(false);
     }
 
@@ -100,7 +103,7 @@ public class RetrofitActivity extends AppCompatActivity implements View.OnClickL
                 });
                 break;
             case R.id.btnPost:
-                User userReq=new User();
+                User userReq = new User();
                 userReq.setUserId(1);
                 userReq.setBody("bar");
                 userReq.setTitle("foo");
@@ -120,7 +123,7 @@ public class RetrofitActivity extends AppCompatActivity implements View.OnClickL
 
                 break;
             case R.id.btnPut:
-                User userReq2=new User();
+                User userReq2 = new User();
                 userReq2.setId(1);
                 userReq2.setUserId(1);
                 userReq2.setBody("bar");
