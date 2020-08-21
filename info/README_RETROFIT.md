@@ -64,5 +64,10 @@ Finalmente la clase ServicesCallback representa la agrupación de todos las clas
 
 No hay por el momento.
 
+## Expresiones de Gratitud 🎁
+
+* Gracias al sitio https://jsonplaceholder.typicode.com por su REST API para realizar las pruebas.
+* Gracias a flaticon: https://www.flaticon.com , donde extraimos los iconos usados en la aplicación: 
+
 ## Última revisión :watch:
 Lunes, 20 de agosto del 2020
