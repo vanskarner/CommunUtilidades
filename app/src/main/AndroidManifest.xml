@@ -30,7 +30,6 @@
         <activity android:name=".iu.so.mediastore.GalleryImageActivity" />
         <activity android:name=".iu.so.mediastore.GalleryImageMultipleActivity" />
         <activity android:name=".iu.so.mediastore.CameraActivity" />
-        <activity android:name=".iu.lib.retro.RetrofitActivity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

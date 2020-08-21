@@ -5,4 +5,18 @@
     <string name="codeapi_error_unknown">Algo salió mal.(codigo: %s)</string>
     <string name="codeapi_session_invalid">Sesión inválida</string>
 
+    <string name="api_user_id">userId: %s</string>
+    <string name="api_id">id: %s</string>
+    <string name="api_title">title: %s</string>
+    <string name="api_body">body: %s</string>
+    <string name="example_text_large">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="error_unknown">Algo salio mal</string>
+    <string name="error_501">Error del servicio</string>
+    <string name="error_406">No se puede devolver respuesta</string>
+
+    <string name="btn_post">POST</string>
+    <string name="btn_get">GET</string>
+    <string name="btn_put">PUT</string>
+    <string name="btn_delete">DELETE</string>
+
 </resources>

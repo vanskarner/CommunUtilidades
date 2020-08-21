@@ -2,6 +2,9 @@ package vanskarner.android.communutilidades.utilities.lib.retrofit;
 
 import android.os.Build;
 
+import androidx.annotation.NonNull;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -9,7 +12,10 @@ import java.util.concurrent.TimeUnit;
 
 import okhttp3.CipherSuite;
 import okhttp3.ConnectionSpec;
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -58,6 +64,29 @@ public class Retro implements IRetro{
         return httpClient.build();
     }
 
+    private OkHttpClient createOkHttpClientWithHeader(final List<HeaderHttp> headerHttpList) {
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient.Builder httpClient = new OkHttpClient.Builder().connectTimeout(CONNECT_TIMEOUT_SECONDS, TimeUnit.SECONDS).readTimeout(READ_TIMEOUT_SECONDS, TimeUnit.SECONDS);
+        compatibilityAndroid4_1_To_4_4(httpClient);
+        httpClient.addInterceptor(new Interceptor() {
+            @NonNull
+            @Override
+            public Response intercept(@NonNull Chain chain) throws IOException {
+                Request request=chain.request();
+                Request.Builder builder=request.newBuilder();
+                for (HeaderHttp item: headerHttpList){
+                    builder.addHeader(item.getParameter(),item.getValue());
+                }
+                return chain.proceed(builder.build());
+            }
+        });
+        if (ENABLE_LOG) {
+            httpClient.addInterceptor(logging);
+        }
+        return httpClient.build();
+    }
+
     @Override
     public <S> S createService(Class<S> serviceClass) {
         Retrofit retrofit = new Retrofit.Builder()
@@ -68,5 +97,14 @@ public class Retro implements IRetro{
         return retrofit.create(serviceClass);
     }
 
+    @Override
+    public <S> S createServiceWithHeader(Class<S> serviceClass, List<HeaderHttp> headerHttpList) {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(createOkHttpClientWithHeader(headerHttpList))
+                .build();
+        return retrofit.create(serviceClass);
+    }
 
 }

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".iu.lib.retro.RetrofitActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:drawableStart="@drawable/ic_title"
+            android:drawableLeft="@drawable/ic_title"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/api_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:drawableStart="@drawable/ic_content"
+            android:drawableLeft="@drawable/ic_content"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:text="@string/api_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvUserId"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_userid"
+            android:drawableLeft="@drawable/ic_userid"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/api_user_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBody" />
+
+        <TextView
+            android:id="@+id/tvId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_id"
+            android:drawableLeft="@drawable/ic_id"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/api_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserId" />
+
+        <Button
+            android:id="@+id/btnGet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/btn_get"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+        <Button
+            android:id="@+id/btnPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/btn_post"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnGet" />
+
+        <Button
+            android:id="@+id/btnPut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/btn_put"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnPost" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/btn_delete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnPut" />
+
+        <TextView
+            android:id="@+id/tvGet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="3dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="https://jsonplaceholder.typicode.com/posts/1"
+            app:layout_constraintBottom_toBottomOf="@+id/btnGet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnGet"
+            app:layout_constraintTop_toTopOf="@+id/btnGet" />
+
+        <TextView
+            android:id="@+id/tvPost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="3dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="https://jsonplaceholder.typicode.com/posts"
+            app:layout_constraintBottom_toBottomOf="@+id/btnPost"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnPost"
+            app:layout_constraintTop_toTopOf="@+id/btnPost" />
+
+        <TextView
+            android:id="@+id/tvPut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="3dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="https://jsonplaceholder.typicode.com/posts/1"
+            app:layout_constraintBottom_toBottomOf="@+id/btnPut"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnPut"
+            app:layout_constraintTop_toTopOf="@+id/btnPut" />
+
+        <TextView
+            android:id="@+id/tvDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="3dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="https://jsonplaceholder.typicode.com/posts/1"
+            app:layout_constraintBottom_toBottomOf="@+id/btnDelete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnDelete"
+            app:layout_constraintTop_toTopOf="@+id/btnDelete" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvId" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

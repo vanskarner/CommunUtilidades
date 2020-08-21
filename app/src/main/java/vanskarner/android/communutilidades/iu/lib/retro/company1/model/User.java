@@ -1,27 +1,10 @@
-package vanskarner.android.communutilidades.iu.lib.retro.model;
+package vanskarner.android.communutilidades.iu.lib.retro.company1.model;
 
-public class UserRequest {
-    private String token;
+public class User {
     private int userId;
     private int id;
     private String title;
     private String body;
-
-    public UserRequest(String token, int userId, int id, String title, String body) {
-        this.token = token;
-        this.userId = userId;
-        this.id = id;
-        this.title = title;
-        this.body = body;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
 
     public int getUserId() {
         return userId;
@@ -53,5 +36,15 @@ public class UserRequest {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", id=" + id +
+                ", title='" + title + '\'' +
+                ", body='" + body + '\'' +
+                '}';
     }
 }
