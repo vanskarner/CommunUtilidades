@@ -11,6 +11,10 @@ Utilidad relacionada a los servicios web. Forma parte del proyecto [CommonUtilit
     implementation 'com.squareup.okhttp3:okhttp:3.12.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
 ```
+* `AndroidManifest.xml` | Agregar permiso
+```xml
+<uses-permission android:name="android.permission.INTERNET" />    
+```
 ## Compatibilidad :heavy_check_mark:
 
 * Android 4.1
